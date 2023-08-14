@@ -28,7 +28,7 @@ const Auth = () => {
     }
   };
 
-  console.log(auth);
+  
 
   const handleSignOut = async () => {
     await signOut(auth);
@@ -82,7 +82,7 @@ const Auth = () => {
       </div>
       <button
         onClick={handleSignOut}
-        className="absolute right-44 top-5 bg-red-400 px-2 py-1.5 rounded-md text-white"
+        className="absolute right-44 top-5 bg-red-400 px-2 py-1.5 rounded-md text-white z-10"
       >
         Sign Out
       </button>
