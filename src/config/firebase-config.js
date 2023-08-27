@@ -1,8 +1,7 @@
-
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getAuth, GoogleAuthProvider} from "firebase/auth"
-import {getFirestore} from "firebase/firestore"
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -15,7 +14,7 @@ const firebaseConfig = {
   storageBucket: "fir-course-7ba46.appspot.com",
   messagingSenderId: "580674191311",
   appId: "1:580674191311:web:2486516e90953fc9225cba",
-  measurementId: "G-C47CDZRNEH"
+  measurementId: "G-C47CDZRNEH",
 };
 
 // Initialize Firebase
