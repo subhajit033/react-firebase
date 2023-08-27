@@ -28,8 +28,6 @@ const Auth = () => {
     }
   };
 
-  
-
   const handleSignOut = async () => {
     await signOut(auth);
     setAlertMsg("Logout sucessfully");
@@ -80,24 +78,28 @@ const Auth = () => {
           </div>
         </form>
       </div>
-      <button
-        onClick={handleSignOut}
-        className="absolute right-44 top-5 bg-red-400 px-2 py-1.5 rounded-md text-white z-10"
-      >
-        Sign Out
-      </button>
+      {auth?.currentUser && (
+        <button
+          onClick={handleSignOut}
+          className="absolute right-44 top-5 bg-red-400 px-2 py-1.5 rounded-md text-white z-10"
+        >
+          Sign Out
+        </button>
+      )}
       {/* user information */}
-      {auth?.currentUser && <div className="absolute right-5 top-5">
-        <div className="flex flex-col items-center">
-          <img
-            className="w-12 rounded-full"
-            src={auth?.currentUser?.photoURL}
-            alt="user"
-          />
-          <p>{auth?.currentUser?.displayName}</p>
-          <p>{auth?.currentUser?.email}</p>
+      {auth?.currentUser && (
+        <div className="absolute right-5 top-5">
+          <div className="flex flex-col items-center">
+            <img
+              className="w-12 rounded-full"
+              src={auth?.currentUser?.photoURL}
+              alt="user"
+            />
+            <p>{auth?.currentUser?.displayName}</p>
+            <p>{auth?.currentUser?.email}</p>
+          </div>
         </div>
-      </div>}
+      )}
     </>
   );
 };
